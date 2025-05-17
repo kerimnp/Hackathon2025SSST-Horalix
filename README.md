@@ -1,61 +1,70 @@
+# 🩻 Radiology AI Assistant & Antibiotic Management Platform
 
-## Project info
+## 🚀 Project Overview
 
-**URL**: https://lovable.dev/projects/e068948d-f2a9-4551-b5b0-6e787e344de0
+In just 48 hours, our team built two powerful healthcare tools designed to support clinical decision-making, improve patient outcomes, and combat antibiotic resistance.
 
-## How can I edit this code?
+- The **Radiology AI Assistant** provides instant, explainable insights on chest X-rays to aid in fast and accurate triage.
+- The **Antibiotic Management App** empowers doctors with an all-in-one platform to prescribe safely, view patient data, check drug interactions, and access evidence-based treatment guidelines.
 
-There are several ways of editing your 
-**Use your preferred IDE**
+These tools are designed to be lightweight, practical, and usable in real-world clinical workflows — especially in under-resourced or high-pressure environments.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 👨‍⚕️ Team Members
 
-Follow these steps:
+- **Kerim Šabić** – Fullstack development, AI integration, system architecture
+- **Emir Delić** – UI/UX design, medical consultation, clinical domain expertise
+- **Amrudin Naser** – Data modeling, feature planning, medical domain expertise
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧠 Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📷 Radiology AI Assistant
+- Upload chest X-ray images
+- Real-time AI-based diagnosis (e.g., pneumonia, nodules)
+- Heatmap visualizations for explainability
+- Severity triage: prioritize critical cases
+- Built-in feedback flow for continuous learning
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 💊 Antibiotic Prescription & Clinical Dashboard
+- Create and manage prescriptions
+- Issue referral letters (uputnica)
+- Enter and view patient history and lab results
+- Check for drug interactions
+- View up-to-date antibiotic treatment guidelines
+- Monitor regional antibiotic resistance trends (simulated)
+- Doctor dashboard with patient follow-up tracking
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Tech Stack
 
-**Use GitHub Codespaces**
+| Layer | Tools / Frameworks |
+|-------------|--------------------------------------------------------|
+| **Frontend** | React.js / Streamlit (depending on demo version) |
+| **Backend** | Python, FastAPI |
+| **AI/ML** | Pretrained CNN model for chest X-ray interpretation |
+| **Data** | Simulated datasets (resistance, interactions, labs) |
+| **Database** | SQLite / PostgreSQL |
+| **Visualization** | Plotly, Matplotlib, custom dashboards |
+| **Deployment** | Local app + demo server setup |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📈 Future Potential
 
-This project is built with .
+- Integration with real hospital EMRs (via FHIR)
+- Live connection to resistance surveillance APIs (e.g., WHO GLASS)
+- Mobile app for rural or emergency use
+- QR code summaries for patient handouts
+- AI-based treatment suggestions based on full patient context
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## ❤️ Built With Purpose
 
-Simply open [Lovable](https://lovable.dev/projects/e068948d-f2a9-4551-b5b0-6e787e344de0) and click on Share -> Publish.
+We created these tools not just as prototypes, but as proof that even in 48 hours, technology can meaningfully amplify clinical care.
 
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+> "AI won't replace doctors. But doctors who use AI will help save more lives."
