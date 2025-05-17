@@ -1,0 +1,195 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 222 47% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 210 100% 50%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 76% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    @apply w-full h-full overflow-auto;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* iOS Design Components */
+.ios-card-shadow {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.ios-blur-background {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.ios-input {
+  @apply rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/70 
+    px-4 py-3 focus:ring-1 focus:ring-medical-accent focus:border-medical-accent 
+    transition-all duration-200 ease-in-out placeholder:text-gray-400;
+}
+
+.ios-button {
+  @apply rounded-xl bg-medical-primary text-white font-medium px-5 py-3
+    hover:bg-medical-primary-hover active:scale-95 transition-all duration-200;
+}
+
+.ios-button-secondary {
+  @apply rounded-xl bg-white dark:bg-gray-800 text-medical-primary font-medium px-5 py-3
+    hover:bg-gray-50 dark:hover:bg-gray-700 active:scale-95 transition-all duration-200
+    border border-gray-200 dark:border-gray-700;
+}
+
+.ios-segmented-control {
+  @apply flex p-1 bg-gray-100 dark:bg-gray-800 rounded-xl;
+}
+
+.ios-segmented-item {
+  @apply flex-1 py-2 px-4 text-center font-medium rounded-lg transition-all duration-200;
+}
+
+.ios-segmented-item.active {
+  @apply bg-white dark:bg-gray-700 text-medical-primary shadow-sm;
+}
+
+.ios-toggle {
+  @apply relative inline-flex h-6 w-11 items-center rounded-full
+    transition-colors focus-visible:outline-none focus-visible:ring-2
+    focus-visible:ring-medical-primary focus-visible:ring-offset-2;
+}
+
+.ios-toggle-thumb {
+  @apply pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg
+    ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0;
+}
+
+/* Original Classes */
+.form-card {
+  @apply bg-white/80 dark:bg-medical-bg-secondary/80 
+    backdrop-blur-xl border border-black/5 dark:border-medical-text-secondary/10
+    shadow-lg rounded-2xl transition-all duration-300;
+}
+
+.premium-button {
+  @apply bg-gradient-medical text-white font-medium px-6 py-3 rounded-lg
+    hover:shadow-lg transition-all duration-300 sticky bottom-6 z-50 w-full;
+}
+
+.form-label {
+  @apply text-sm font-medium text-gray-700 dark:text-medical-text-secondary;
+}
+
+.input-field {
+  @apply bg-white/90 dark:bg-medical-bg/80 
+    border border-gray-200 dark:border-medical-text-secondary/20 
+    rounded-lg px-4 py-2 w-full 
+    focus:ring-2 focus:ring-medical-primary/20 
+    focus:border-medical-primary/40 
+    text-gray-900 dark:text-medical-text
+    placeholder:text-gray-400 dark:placeholder:text-medical-text-secondary/50;
+}
+
+.standard-card {
+  @apply bg-white/80 dark:bg-medical-bg-secondary/50
+    backdrop-blur-xl border border-black/5 dark:border-medical-text-secondary/10
+    shadow-lg rounded-2xl transition-all duration-300;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
